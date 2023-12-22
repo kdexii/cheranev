@@ -8,7 +8,7 @@
 }
 
 .project {
-    max-width: 770px;
+    max-width: 470px;
     background-color: var(--project-card-bg);
     box-shadow: var(--box-shadow);
     border-radius: 10px;
@@ -28,4 +28,14 @@
 
 .product_card_block {
     display: flex;
+}
+.product_card_block__preview {
+    width: 150px;
+    background-color: black;
+    margin: 15px 0px 15px 15px;
+    border-radius: 15px 0px 0px 15px;
+}
+.product_card_block__desc {
+    background-color: green;
+    border-radius: 15px;
 }
