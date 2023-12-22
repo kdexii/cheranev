@@ -10,12 +10,16 @@ import project03Big from "../img/projects/03-big.jpg"
 import project04 from "../img/projects/04.jpg"
 import project04Big from "../img/projects/04-big.jpg"
 
+import whitePcProductPc01 from "../img/projects/white-pc.png"
+import whitePcProductPc02 from "../img/projects/white-pc2.png"
+import whitePcProductPc03 from "../img/projects/white-pc-03.png"
+import whitePcProductPc04 from "../img/projects/white-pc-04.png"
 const projects = [
     {
         id: 1,
         title: "Example 1",
         skills: "Example skills 1",
-        img: project01,
+        img: whitePcProductPc01,
         imgBig: project01Big,
         gitHubLink: "link"
     },
@@ -23,7 +27,7 @@ const projects = [
         id: 2,
         title: "Example 2",
         skills: "Example skills 2",
-        img: project02,
+        img: whitePcProductPc02,
         imgBig: project02Big,
         gitHubLink: "link"
     },
@@ -31,7 +35,7 @@ const projects = [
         id: 3,
         title: "Example 3",
         skills: "Example skills 3",
-        img: project03,
+        img: whitePcProductPc03,
         imgBig: project03Big,
         gitHubLink: "link"
     },
@@ -39,7 +43,7 @@ const projects = [
         id: 4,
         title: "Example 4",
         skills: "Example skills 4",
-        img: project04,
+        img: whitePcProductPc04,
         imgBig: project04Big,
         gitHubLink: "link"
     },
