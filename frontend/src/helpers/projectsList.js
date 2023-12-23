@@ -17,34 +17,41 @@ import whitePcProductPc04 from "../img/projects/white-pc-04.png"
 const projects = [
     {
         id: 1,
-        title: "Example 1",
+        title: "Бюджетный",
         skills: "Example skills 1",
+        price_start: "54 000",
         img: whitePcProductPc01,
+        video_card: "RTX 3050",
+        cpu: "i7 13700kf",
+        memory: "16GB",
+        resolutions_supported: "2K",
         imgBig: project01Big,
         gitHubLink: "link"
     },
     {
         id: 2,
-        title: "Example 2",
+        title: "Приемлимый",
         skills: "Example skills 2",
+        price_start: "120 000",
         img: whitePcProductPc02,
+        video_card: "RTX 4060",
+        cpu: "i7 13700kf",
+        memory: "16GB",
+        resolutions_supported: "4K",
         imgBig: project02Big,
         gitHubLink: "link"
     },
     {
         id: 3,
-        title: "Example 3",
+        title: "Мощный",
         skills: "Example skills 3",
+        price_start: "254 000",
         img: whitePcProductPc03,
+        video_card: "RTX 4090",
+        cpu: "i7 13700kf",
+        memory: "16GB",
+        resolutions_supported: "8K",
         imgBig: project03Big,
-        gitHubLink: "link"
-    },
-    {
-        id: 4,
-        title: "Example 4",
-        skills: "Example skills 4",
-        img: whitePcProductPc04,
-        imgBig: project04Big,
         gitHubLink: "link"
     },
 ]

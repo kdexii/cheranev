@@ -1,17 +1,41 @@
 import "./style.css"
 import {NavLink} from "react-router-dom";
+import gpu_icon from "../../img/components/graphics-card.png"
+import cpu_icon from "../../img/components/processor.png"
 
-function Project({index, title, img}) {
+function Project({index, title, img, price_start, video_card, cpu, memory, resolution_supported}) {
     return (<NavLink to={`/project/${index - 1}`}>
         <li className="project">
-            <div className="product_card_block">
-                <div className="product_card_block__preview">
-                    <img src={img} alt={title} className="project__img"/>
+
+            <section className="product-container product-1">
+                <div className="card">
+                    <div className="photo">
+                        <img src={img} alt="image"/>
+                    </div>
+                    <div className="content">
+                        <div className="title">{title}</div>
+                        <div className="bg-title">{resolution_supported}</div>
+                        <div className="feature size_price_start">
+                            <p>{price_start} ₽</p>
+                        </div>
+                        <div className="feature size">
+                            <div>видеокарта :</div>
+                            <p>{video_card}</p>
+                        </div>
+                        <div className="feature color">
+                            <div>процессор :</div>
+                            <p>{cpu}</p>
+                        </div>
+                        <div className="feature color">
+                            <div>память :</div>
+                            <p>{memory}</p>
+                        </div>
+
+                        <button className="btn-buy">Add to Card</button>
+
+                    </div>
                 </div>
-                <div className="product_card_block__desc">
-                    <h3 className="project__title">{title}</h3>
-                </div>
-            </div>
+            </section>
         </li>
     </NavLink>)
 }

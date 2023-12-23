@@ -11,7 +11,7 @@ function Navbar() {
             <div className="container">
                 <div className="nav-row">
                     <NavLink to="/" className="logo">
-                        <strong>My React</strong> application
+                        <strong>CHERANEV</strong>.PC
                     </NavLink>
                     <BtnDarkMode></BtnDarkMode>
                     <ul className="nav-list">
