@@ -8,15 +8,15 @@ function Contacts() {
                     <ul className="content-list">
                         <li className="content-list__item">
                             <h2 className="title-2">Location</h2>
-                            <p>Moscow, Russia</p>
+                            <p>Mari El, Yoshkar-Ola</p>
                         </li>
                         <li className="content-list__item">
                             <h2 className="title-2">Telegram / WhatsApp</h2>
-                            <p><a href="tel:+79051234567">+7 (905) 123-45-67</a></p>
+                            <p><a href="tel:+79961166348">+7 (996) 116-63-48</a></p>
                         </li>
                         <li className="content-list__item">
                             <h2 className="title-2">Email</h2>
-                            <p><a href="mailto:webdev@protonmail.com">webdev@protonmail.com</a></p>
+                            <p><a href="mailto:lasvacations@yandex.ru">lasvacations@yandex.ru</a></p>
                         </li>
                     </ul>
 
