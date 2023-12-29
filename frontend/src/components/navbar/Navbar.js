@@ -16,18 +16,33 @@ function Navbar() {
                     <BtnDarkMode></BtnDarkMode>
                     <ul className="nav-list">
                         <li className="nav-list__item">
-                            <NavLink to="/" className={({isActive}) => isActive ? activeLink: normalLink}>
+                            <NavLink to="/" className={({isActive}) => isActive ? activeLink : normalLink}>
                                 Home
                             </NavLink>
                         </li>
                         <li className="nav-list__item">
-                            <NavLink to="/projects" className={({isActive}) => isActive ? activeLink: normalLink}>
+                            <NavLink to="/projects" className={({isActive}) => isActive ? activeLink : normalLink}>
                                 Projects
                             </NavLink>
                         </li>
                         <li className="nav-list__item">
-                            <NavLink to="/contacts" className={({isActive}) => isActive ? activeLink: normalLink}>
+                            <NavLink to="/contacts" className={({isActive}) => isActive ? activeLink : normalLink}>
                                 Contacts
+                            </NavLink>
+                        </li>
+                        <li className="nav-list__item">
+                            <NavLink to="/login" className={({isActive}) => isActive ? activeLink : normalLink}>
+                                Login
+                            </NavLink>
+                        </li>
+                        <li className="nav-list__item">
+                            <NavLink to="/logout" className={({isActive}) => isActive ? activeLink : normalLink}>
+                                Logout
+                            </NavLink>
+                        </li>
+                        <li className="nav-list__item">
+                            <NavLink to="/profile" className={({isActive}) => isActive ? activeLink : normalLink}>
+                                Profile
                             </NavLink>
                         </li>
                     </ul>

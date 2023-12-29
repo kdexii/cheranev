@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ReactLoading from "react-loading";
+import './interceptors/axios';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

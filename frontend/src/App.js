@@ -7,6 +7,9 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contacts from "./pages/Contacts";
 import ScrollToTop from "./utils/scrollToTop";
+import {Login} from "./components/auth/login/Login";
+import {Profile} from "./components/auth/profile/Profle";
+import {Logout} from "./components/auth/Logout";
 function App() {
   return (
       <div className="App">
@@ -18,6 +21,9 @@ function App() {
                   <Route path='/projects' element={<Projects/>}></Route>
                   <Route path='/project/:id' element={<Project/>}></Route>
                   <Route path='/contacts' element={<Contacts/>}></Route>
+                  <Route path='/login' element={<Login/>}></Route>
+                  <Route path='/logout' element={<Logout/>}></Route>
+                  <Route path='/profile' element={<Profile/>}></Route>
               </Routes>
               <Footer></Footer>
           </Router>
