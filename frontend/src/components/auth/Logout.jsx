@@ -16,7 +16,8 @@ export const Logout = () => {
                 console.log(data)
 
                 console.log('logout', data)
-                localStorage.clear();
+                localStorage.removeItem("access_token");
+                localStorage.removeItem("refresh_token")
                 axios.defaults.headers.common['Authorization'] = null;
                 window.location.href = '/login'
             } catch (e) {

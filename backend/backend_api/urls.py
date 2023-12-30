@@ -1,7 +1,7 @@
 from  rest_framework import routers
-from .api import TextViewSet
+from .api import ProjectsViewSet
 
 router = routers.DefaultRouter()
-router.register('api/text', TextViewSet, 'text')
+router.register('api/projects', ProjectsViewSet, 'projects')
 
 urlpatterns = router.urls

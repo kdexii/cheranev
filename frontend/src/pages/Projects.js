@@ -1,4 +1,4 @@
-import {projects} from "../helpers/projectsList";
+import projectsList from "../helpers/projectsList";
 import Project from "../components/project/Project";
 function Projects() {
     return (
@@ -7,7 +7,7 @@ function Projects() {
                 <div className="container">
                     <h2 className="title-1">Готовые сборки</h2>
                     <ul className="projects">
-                        {projects.map((project) => {
+                        {projectsList.map((project) => {
                             return (
                                 <Project
                                     key={project.id}

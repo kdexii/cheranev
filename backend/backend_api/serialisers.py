@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Text
+from .models import Project
 
 
-class TextSerializer(serializers.ModelSerializer):
+class ProjectsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Text
+        model = Project
         fields = '__all__'

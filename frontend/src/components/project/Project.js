@@ -1,7 +1,7 @@
 import "./style.css"
 import {NavLink} from "react-router-dom";
-import gpu_icon from "../../img/components/graphics-card.png"
-import cpu_icon from "../../img/components/processor.png"
+// import gpu_icon from "../../img/components/graphics-card.png"
+// import cpu_icon from "../../img/components/processor.png"
 
 function Project({index, title, img, price_start, video_card, cpu, memory, resolution_supported}) {
     return (<NavLink to={`/project/${index - 1}`}>
