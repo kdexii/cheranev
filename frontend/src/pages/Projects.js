@@ -1,4 +1,4 @@
-import projectsList from "../helpers/projectsList";
+import projectsList from "../helpers/ProjectsList";
 import Project from "../components/project/Project";
 function Projects() {
     return (

@@ -14,19 +14,35 @@ import whitePcProductPc01 from "../img/projects/white-pc.png"
 import whitePcProductPc02 from "../img/projects/white-pc2.png"
 import whitePcProductPc03 from "../img/projects/white-pc-03.png"
 import whitePcProductPc04 from "../img/projects/white-pc-04.png"
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
-function projectsList() {
+const ProjectsList = () => {
+    const [resultArray, setResultArray] = useState([])
+
     // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+        const expensesListResp = async () => {
+            await axios.get('http://localhost:8000/api/projects')
+                .then(
+                    response => setResultArray(response.data))
+        }
+        expensesListResp();
+    }, []);
 
-    const headers = {
-    };
-    // eslint-disable-next-line no-unused-vars
-    let data;
-    axios.get('http://localhost:8000/api/projects', { headers })
-        .then(response => data = response.data.total);
-
+    //
+    // let result = ""
+    // const headers = {
+    // };
+    // // eslint-disable-next-line no-unused-vars
+    // axios.get('http://localhost:8000/api/projects', { headers })
+    //     .then(function(response) {
+    //         result = response.data
+    //     })
+    //     .catch(function(error) {
+    //         console.log('ERROR::', error.response.data);
+    //     });
+    // console.log(result)
     return (
         [
 
@@ -71,7 +87,7 @@ function projectsList() {
     }])
 }
 
-export default projectsList()
+export default ProjectsList
 // const projects = [
 // {
 //         id: 1,
