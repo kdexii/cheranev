@@ -1,19 +1,35 @@
-import projectsList from "../helpers/ProjectsList";
 import Project from "../components/project/Project";
+import {useEffect, useState} from "react";
+
 function Projects() {
+
+    const [users, setUsers] = useState([])
+
+    useEffect(() => {
+        (async () => {
+            const data = await fetch("http://localhost:8000/api/projects")
+                .then(res => res.json())
+
+            setUsers(data)
+        })()
+    }, [])
+
+
     return (
-        <>
+
             <main className="section">
                 <div className="container">
                     <h2 className="title-1">Готовые сборки</h2>
                     <ul className="projects">
-                        {projectsList.map((project) => {
+                        {users.map((project) => {
+
                             return (
                                 <Project
                                     key={project.id}
                                     title={project.title}
+                                    description={project.description}
+                                    img={project.image}
                                     price_start={project.price_start}
-                                    img={project.img}
                                     video_card={project.video_card}
                                     cpu={project.cpu}
                                     memory={project.memory}
@@ -26,7 +42,6 @@ function Projects() {
                     </ul>
                 </div>
             </main>
-        </>
     )
 }
 

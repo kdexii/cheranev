@@ -17,12 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt import views as jwt_views
-
+from django.contrib.auth.models import Group
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("backend_api.urls")),
+    path('', include("backend_api.urls"), name='backend_api'),
     path('', include('authentification.urls')),
-    path('token/', jwt_views.TokenObtainPairView.as_view(), name ='token_obtain_pair'),
-    path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name ='token_refresh'),
+    path('token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
 ]
+admin.site.site_header = "Backend admin panel"
+admin.site.site_title = "Admin panel"
+admin.site.index_title = "Backend users and API endpoints"
+admin.site.unregister(Group)
