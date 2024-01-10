@@ -31,7 +31,7 @@ function Project({index, title, img, price_start, video_card, cpu, memory, resol
                             <p>{memory}</p>
                         </div>
 
-                        <button className="btn-buy">Add to Card</button>
+                        <button className="btn-buy">Заказать</button>
 
                     </div>
                 </div>
