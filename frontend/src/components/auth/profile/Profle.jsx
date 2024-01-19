@@ -5,6 +5,7 @@ export const Profile = () => {
     const [message, setMessage] = useState('');
     const access_token = localStorage.getItem("access_token")
 
+    const isAdmin = message === 'admin';
     useEffect(() => {
         if(localStorage.getItem('access_token') === null){
             window.location.href = '/login'
@@ -28,9 +29,26 @@ export const Profile = () => {
     }, []);
 
 
-    return (
-        <div>
-            <h1>{message}, добро пожаловать в ваш профиль!</h1>
-        </div>
-    )
+    if (message !== 'admin') {
+        return (
+            <div>
+                <h1>{message}, добро пожаловать в ваш профиль!</h1>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <h1>{message}, добро пожаловать в ваш профиль, админ!</h1>
+                <form
+                    id="form"
+                    encType="multipart/form-data"
+                    action="http://localhost:3333/upload"
+                    method="POST"
+                >
+                    <input className="input file-input" type="file" name="file" multiple/>
+                    <button className="button" type="submit">Submit</button>
+                </form>
+            </div>
+        )
+    }
 }

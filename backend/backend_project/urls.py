@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('authentification.urls')),
     path('token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
+
 ]
 admin.site.site_header = "Backend admin panel"
 admin.site.site_title = "Admin panel"

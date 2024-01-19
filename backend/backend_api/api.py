@@ -1,7 +1,7 @@
-from .models import Project, ImageProject
+from .models import Project
 from rest_framework import viewsets, permissions
 
-from .serialisers import ProjectsSerializer, ProjectsImageSerializer
+from .serialisers import ProjectsSerializer
 
 
 class ProjectsViewSet(viewsets.ModelViewSet):
@@ -10,11 +10,3 @@ class ProjectsViewSet(viewsets.ModelViewSet):
         permissions.AllowAny
     ]
     serializer_class = ProjectsSerializer
-
-
-class ProjectsImageViewSet(viewsets.ModelViewSet):
-    queryset = ImageProject.objects.all()
-    permission_classes = [
-        permissions.AllowAny
-    ]
-    serializer_class = ProjectsImageSerializer
