@@ -1,9 +1,9 @@
 // Import the react JS packages
 import axios from "axios";
 import {useState} from "react";
-import "./login.css"
+import "./register.css"
 // Define the Register function.
-export const Login = () => {
+export const Register = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -12,29 +12,24 @@ export const Login = () => {
 
         const user = {
             username: username,
-            password: password
+            password: password,
+            password2:password
         };
 
-        const {data} = await axios.post('http://localhost:8000/token/', user, {
+        const {data} = await axios.post('http://localhost:8000/api/register', user, {
             headers: {
                 'Content-Type': 'application/json'
             }
         }, {withCredentials: true});
-
-        console.log(data)
-        localStorage.removeItem("access_token");
-        localStorage.removeItem("refresh_token")
-        localStorage.setItem('access_token', data.access);
-        localStorage.setItem('refresh_token', data.refresh);
         axios.defaults.headers.common['Authorization'] = `Bearer ${data['access']}`;
-        window.location.href = '/profile'
+        window.location.href = '/login'
 
     }
 
     return (
         <div className="loginContainer">
         <form className="form_main" action="" onSubmit={submit}>
-            <p className="heading">Авторизация</p>
+            <p className="heading">Регистрация</p>
             <div className="inputContainer">
                 {/* Нужно добавить икноку пользавателя */}
                 <input
@@ -63,11 +58,7 @@ export const Login = () => {
                 />
             </div>
 
-            <button id="button">Войти</button>
-            <div className="signupContainer">
-                <p>Нет учетной записи?</p>
-                <a href="/register">Регистрация</a>
-            </div>
+            <button id="button">Зарегестрироваться</button>
         </form>
         </div>
     )

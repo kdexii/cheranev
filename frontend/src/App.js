@@ -10,6 +10,7 @@ import ScrollToTop from "./utils/scrollToTop";
 import {Login} from "./components/auth/login/Login";
 import {Profile} from "./components/auth/profile/Profle";
 import {Logout} from "./components/auth/Logout";
+import {Register} from "./components/auth/register/Register";
 function App() {
   return (
       <div className="App">
@@ -22,6 +23,7 @@ function App() {
                   <Route path='/project/:id' element={<Project/>}></Route>
                   <Route path='/contacts' element={<Contacts/>}></Route>
                   <Route path='/login' element={<Login/>}></Route>
+                  <Route path='/register' element={<Register/>}></Route>
                   <Route path='/logout' element={<Logout/>}></Route>
                   <Route path='/profile' element={<Profile/>}></Route>
               </Routes>

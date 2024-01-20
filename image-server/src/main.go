@@ -13,17 +13,11 @@ import (
 
 const MAX_UPLOAD_SIZE = 1024 * 1024 // 1MB
 
-// Progress is used to track the progress of a file upload.
-// It implements the io.Writer interface so it can be passed
-// to an io.TeeReader()
 type Progress struct {
 	TotalSize int64
 	BytesRead int64
 }
 
-// Write is used to satisfy the io.Writer interface.
-// Instead of writing somewhere, it simply aggregates
-// the total bytes on each read
 func (pr *Progress) Write(p []byte) (n int, err error) {
 	n, err = len(p), nil
 	pr.BytesRead += int64(n)
@@ -31,7 +25,6 @@ func (pr *Progress) Write(p []byte) (n int, err error) {
 	return
 }
 
-// Print displays the current progress of the file upload
 func (pr *Progress) Print() {
 	if pr.BytesRead == pr.TotalSize {
 		fmt.Println("DONE!")
@@ -51,14 +44,10 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
 	}
-
-	// 32 MB is the default used by FormFile
 	if err := r.ParseMultipartForm(32 << 20); err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-
-	// get a reference to the fileHeaders
 	files := r.MultipartForm.File["file"]
 
 	for _, fileHeader := range files {

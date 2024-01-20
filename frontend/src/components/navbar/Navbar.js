@@ -11,7 +11,7 @@ function Navbar() {
             <div className="container">
                 <div className="nav-row">
                     <NavLink to="/" className="logo">
-                        <strong>CHERANEV</strong>.PC
+                        <strong>APPLICATION</strong>.LOC
                     </NavLink>
                     <BtnDarkMode></BtnDarkMode>
                     <ul className="nav-list">
@@ -33,6 +33,11 @@ function Navbar() {
                         <li className="nav-list__item">
                             <NavLink to="/login" className={({isActive}) => isActive ? activeLink : normalLink}>
                                 Login
+                            </NavLink>
+                        </li>
+                        <li className="nav-list__item">
+                            <NavLink to="/register" className={({isActive}) => isActive ? activeLink : normalLink}>
+                                Register
                             </NavLink>
                         </li>
                         <li className="nav-list__item">

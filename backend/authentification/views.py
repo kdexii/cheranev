@@ -4,7 +4,6 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework import status
 
-
 class HomeView(APIView):
     permission_classes = (IsAuthenticated,)
 

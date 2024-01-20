@@ -58,9 +58,16 @@
     padding-left: 30px;
 }
 
+.inputField::placeholder {
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-weight: 500;
+}
+
 #button {
     position: relative;
     width: 100%;
+    /*border: 2px solid #8000ff;*/
     background-color: var(--accent);
     height: 40px;
     color: white;
