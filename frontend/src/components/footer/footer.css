@@ -1,0 +1,193 @@
+/* Footer */
+
+.footer {
+    margin-top: auto;
+    padding: 60px 0 50px;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+.footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 27px;
+}
+
+.social {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 16px;
+}
+
+.copyright p + p {
+    margin-top: 0.5em;
+}
+
+@media (max-width: 620px) {
+    /* Header  */
+
+    .header {
+        min-height: unset;
+    }
+
+    .header__title {
+        font-size: 30px;
+    }
+
+    .header__title strong {
+        font-size: 40px;
+    }
+
+    /* Nav */
+
+    .nav-row {
+        justify-content: space-between;
+    }
+
+    .dark-mode-btn {
+        order: 0;
+    }
+
+    /* General */
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .title-1 {
+        margin-bottom: 30px;
+        font-size: 40px;
+    }
+
+    .title-2 {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    /* Projects */
+
+    .project__title {
+        font-size: 22px;
+    }
+
+    /* Projects page */
+
+    .project-details__desc {
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+
+    /* Content List */
+
+    .content-list {
+        row-gap: 20px;
+    }
+
+    .content-list__item {
+        font-size: 16px;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 40px 0 30px;
+    }
+
+    .footer__wrapper {
+        row-gap: 20px;
+    }
+    
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+.footer-icons-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-icons-list .footer-icon-content {
+    margin: 0 10px;
+    position: relative;
+}
+.footer-icons-list .footer-icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.footer-icons-list .footer-icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+}
+.footer-icons-list .footer-icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.footer-icons-list .footer-icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.footer-icons-list .footer-icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+}
+.footer-icons-list .footer-icon-content a:hover {
+    color: white;
+}
+.footer-icons-list .footer-icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+.footer-icons-list .footer-icon-content a:hover .filled {
+    height: 100%;
+}
+.footer-icons-list .footer-icon-content a[data-social="viber"] .filled,
+.footer-icons-list .footer-icon-content a[data-social="viber"] ~ .tooltip {
+    background-color: #7B519C;
+}
+.footer-icons-list .footer-icon-content a[data-social="whatsapp"] .filled,
+.footer-icons-list .footer-icon-content a[data-social="whatsapp"] ~ .tooltip {
+    background-color: #67C15E;
+}
+.footer-icons-list .footer-icon-content a[data-social="Discord"] .filled,
+.footer-icons-list .footer-icon-content a[data-social="Discord"] ~ .tooltip {
+    background-color: #404EED;
+}
+.footer-icons-list .footer-icon-content a[data-social="telegram"] .filled,
+.footer-icons-list .footer-icon-content a[data-social="telegram"] ~ .tooltip {
+    background-color: #0088cc;
+}
